@@ -27,11 +27,6 @@ interface PageButtonProps {
   onMenuOpen: (id: string, position: { top: number; left: number }) => void;
 }
 
-interface ContextMenuProps {
-  position: { top: number; left: number };
-  onClose: () => void;
-}
-
 // Page Names
 const PAGE_TYPES = ["Info", "Details", "Other", "Ending"];
 
@@ -49,7 +44,7 @@ const PageButton: React.FC<PageButtonProps> = ({
 
   const [, drop] = useDrop({
     accept: "PAGE",
-    hover(item: any) {
+    hover(item: { index: number }) {
       if (item.index === index) return;
       movePage(item.index, index);
       item.index = index;
