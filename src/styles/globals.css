@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #1a202c;
+  color: white;
+  padding: 24px;
+}
+
+.page-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #eaedf0; /* default border */
+  background-color: #eaedf0; /* default background */
+  color: #677289; /* default text */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.page-button:hover {
+  background-color: #d9dce1;
+  border-color: #d9dce1;
+}
+.page-button .page-icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.page-button.active {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+  color: #111827;
+}
+
+.page-button.active .page-icon {
+  color: #f59e0b; /* orange icon */
+}
+
+.page-button.focused {
+  background-color: #ffffff;
+  border-color: #3b82f6;
+  outline: 2px solid #3b82f6;
+  outline-offset: 1px;
+}
+
+.page-button.dragging {
+  opacity: 0.5;
+}
+
+.page-icon {
+  margin-right: 6px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.add-button {
+  font-size: 18px;
+  color: #aaa;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.add-button:hover {
+  color: #fff;
+}
+
+.context-menu {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  width: 200px;
+  z-index: 1000;
+}
+
+.context-menu-title {
+  font-weight: 600;
+  padding: 4px 8px 6px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 6px;
+}
+
+.context-menu button {
+  width: 100%;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.context-menu button:hover {
+  background: #f3f4f6;
+}
+
+.context-menu hr {
+  margin: 6px 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+.context-menu button.danger {
+  color: #dc2626;
+}
